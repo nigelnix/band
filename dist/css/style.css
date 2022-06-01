@@ -1,0 +1,959 @@
+@media only screen and (min-width: 765px) {
+  header nav {
+    display: block;
+    margin-left: 10%;
+  }
+  header nav li {
+    display: inline-block;
+  }
+  header label {
+    display: none;
+  }
+
+  #check-btn {
+    display: none;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 2rem;
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+
+@media only screen and (max-width: 765px) {
+  .banner {
+    font-size: 3rem;
+  }
+
+  #disappear {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .bio-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* ********nav bar *********************/
+/*mobile first*/
+/* hide and show nav bar in mobile dev */
+/*  ****************************************************** */
+/* ****disappearing word Div ****** */
+@-webkit-keyframes "gone" {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes "gone" {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes "lightning" {
+  0%, 70% {
+    color: #484848;
+    text-shadow: none;
+  }
+  100% {
+    color: rgb(134, 33, 134);
+    text-shadow: 3px 0px 10px rgb(207, 90, 207), 3px 0 10px #fff900;
+  }
+  /*lightning colour added to individual spans 200ms apart */
+}
+@keyframes "lightning" {
+  0%, 70% {
+    color: #484848;
+    text-shadow: none;
+  }
+  100% {
+    color: rgb(134, 33, 134);
+    text-shadow: 3px 0px 10px rgb(207, 90, 207), 3px 0 10px #fff900;
+  }
+  /*lightning colour added to individual spans 200ms apart */
+}
+header {
+  display: block;
+}
+header .band-logo {
+  background-color: rgb(255, 255, 255);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-image: url(/images/logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header nav {
+  display: none;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav li {
+  display: block;
+  background-color: purple;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+header nav li:hover {
+  background-color: rgb(189, 5, 5);
+}
+header input[type=checkbox] {
+  display: none;
+}
+header span.icon {
+  display: block;
+  padding: 0.7rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+header span.icon::before {
+  content: "\f0c9";
+  font-size: 4rem;
+  color: purple;
+}
+
+#check-btn:checked ~ nav {
+  display: block;
+}
+#check-btn:checked ~ label span::after {
+  content: "\f00d";
+  font-size: 2rem;
+}
+#check-btn:checked ~ label span::before {
+  display: none;
+}
+
+.banner {
+  font-family: "New Rocker", cursive;
+  font-size: 15em;
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: #484848;
+}
+.banner span {
+  -webkit-animation-name: lightning;
+          animation-name: lightning;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.banner span:nth-child(1) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+.banner span:nth-child(2) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+.banner span:nth-child(3) {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.banner span:nth-child(4) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.banner span:nth-child(5) {
+  -webkit-animation-delay: 1250ms;
+          animation-delay: 1250ms;
+}
+.banner span:nth-child(6) {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+.banner span:nth-child(7) {
+  -webkit-animation-delay: 1750ms;
+          animation-delay: 1750ms;
+}
+.banner span:nth-child(9) {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+
+#disappear {
+  color: #FFFFFF;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+  font-family: "New Rocker", cursive;
+  font-size: 15rem;
+  margin-top: 0.5em;
+  -webkit-animation: gone 20s infinite ease-in-out;
+          animation: gone 20s infinite ease-in-out;
+}
+
+article {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.bio-box {
+  display: flex;
+}
+.bio-box p {
+  margin: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.flip-card {
+  margin-top: 1.5rem;
+  background-color: transparent;
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  perspective: 1000px;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front {
+  margin-top: 1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: #bbb;
+  color: black;
+  border-radius: 1rem;
+}
+
+.flip-card-back {
+  margin-top: 1.5rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: linear-gradient(to left top, rgb(100, 10, 100), rgb(128, 31, 31));
+  border: 3px solid white;
+  color: white;
+  transform: rotateY(180deg);
+  bottom: 1rem;
+}
+
+.fa-solid {
+  color: gold;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.reviews {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.review-card {
+  text-align: center;
+  font-size: 1.4em;
+  width: 300px;
+  height: 300px;
+}
+
+h6 {
+  font-size: 1.5rem;
+  font-style: oblique;
+}
+
+@media only screen and (min-width: 1200px) {
+  header nav {
+    display: block;
+    margin-left: 10%;
+  }
+  header nav li {
+    display: inline-block;
+  }
+  header label {
+    display: none;
+  }
+
+  #check-btn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 2000px) {
+  .banner {
+    font-size: 10rem;
+  }
+
+  #disappear {
+    font-size: 10rem;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .banner {
+    font-size: 8rem;
+  }
+
+  #disappear {
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .banner {
+    font-size: 7rem;
+  }
+
+  #disappear {
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .banner {
+    font-size: 5rem;
+  }
+
+  #disappear {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .banner {
+    font-size: 3.5rem;
+  }
+
+  #disappear {
+    font-size: 3.5rem;
+  }
+
+  .band-logo {
+    display: none;
+  }
+}
+/* ********nav bar *********************/
+/*mobile first*/
+/* hide and show nav bar in mobile dev */
+/*  ****************************************************** */
+/* ****disappearing word Div ****** */
+@keyframes "gone" {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes "lightning" {
+  0%, 70% {
+    color: #484848;
+    text-shadow: none;
+  }
+  100% {
+    color: rgb(134, 33, 134);
+    text-shadow: 3px 0px 10px rgb(207, 90, 207), 3px 0 10px #fff900;
+  }
+  /*lightning colour added to individual spans 200ms apart */
+}
+/* *** lighting for title ended *** */
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+/* This container is needed to position the front and back side */
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* Position the front and back side */
+/* Style the front side (fallback if image is missing) */
+/* Style the back side */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  margin: 2rem;
+  color: white;
+}
+
+header {
+  display: block;
+}
+header nav {
+  display: none;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav li {
+  display: block;
+  background-color: purple;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+header nav li:hover {
+  background-color: rgb(189, 5, 5);
+}
+header input[type=checkbox] {
+  display: none;
+}
+header span.icon {
+  display: block;
+  padding: 0.7rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+header span.icon::before {
+  content: "\f0c9";
+  font-size: 4rem;
+  color: purple;
+}
+
+#check-btn:checked ~ nav {
+  display: block;
+}
+#check-btn:checked ~ label span::after {
+  content: "\f00d";
+  font-size: 2rem;
+}
+#check-btn:checked ~ label span::before {
+  display: none;
+}
+
+.banner {
+  font-family: "New Rocker", cursive;
+  font-size: 15em;
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: #484848;
+}
+.banner span {
+  -webkit-animation-name: lightning;
+          animation-name: lightning;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.banner span:nth-child(1) {
+  -webkit-animation-delay: 250ms;
+          animation-delay: 250ms;
+}
+.banner span:nth-child(2) {
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+.banner span:nth-child(3) {
+  -webkit-animation-delay: 750ms;
+          animation-delay: 750ms;
+}
+.banner span:nth-child(4) {
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+}
+.banner span:nth-child(5) {
+  -webkit-animation-delay: 1250ms;
+          animation-delay: 1250ms;
+}
+.banner span:nth-child(6) {
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+.banner span:nth-child(7) {
+  -webkit-animation-delay: 1750ms;
+          animation-delay: 1750ms;
+}
+.banner span:nth-child(9) {
+  -webkit-animation-delay: 1800ms;
+          animation-delay: 1800ms;
+}
+
+#disappear {
+  color: #FFFFFF;
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #FF2D95 0px 0px 20px, #FF2D95 0px 0px 30px, #FF2D95 0px 0px 40px, #FF2D95 0px 0px 50px, #FF2D95 0px 0px 75px;
+  font-family: "New Rocker", cursive;
+  font-size: 15rem;
+  margin-top: 0.5em;
+  -webkit-animation: gone 20s infinite ease-in-out;
+          animation: gone 20s infinite ease-in-out;
+}
+
+article {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.bio-box {
+  display: flex;
+}
+.bio-box p {
+  margin: 2rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+h3 {
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 2.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 20rem;
+  height: 34rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+}
+.flip-card img {
+  width: 100%;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front-one {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: #bbb;
+  color: black;
+  border-radius: 1rem;
+  background-image: url(/images/drums_iwo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-front-two {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: #bbb;
+  color: black;
+  border-radius: 1rem;
+  background-image: url(/images/guitar_iwo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-front-three {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: #bbb;
+  color: black;
+  border-radius: 1rem;
+  background-image: url(/images/piano_iwo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-front-four {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  background-color: #bbb;
+  color: black;
+  border-radius: 1rem;
+  background-image: url(/images/bass_iwo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: linear-gradient(to left top, rgb(100, 10, 100), rgb(128, 31, 31));
+  border: 3px solid white;
+  color: white;
+  transform: rotateY(180deg);
+  bottom: 1rem;
+}
+.flip-card-back img {
+  border-radius: 10px;
+  width: 100%;
+  height: 40%;
+}
+.flip-card-back p {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+.flip-card-back h1 {
+  margin-top: 0.5rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  header nav {
+    display: block;
+    margin-left: 10%;
+  }
+  header nav li {
+    margin-left: 5%;
+    font-size: 1.5rem;
+    display: inline-block;
+  }
+  header label {
+    display: none;
+  }
+
+  #check-btn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 2000px) {
+  .banner {
+    font-size: 10rem;
+  }
+
+  #disappear {
+    font-size: 10rem;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .banner {
+    font-size: 8rem;
+  }
+
+  #disappear {
+    font-size: 8rem;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .banner {
+    font-size: 7rem;
+  }
+
+  #disappear {
+    font-size: 7rem;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .banner {
+    font-size: 5rem;
+  }
+
+  #disappear {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .banner {
+    font-size: 3.5rem;
+  }
+
+  #disappear {
+    font-size: 3.5rem;
+  }
+
+  .band-logo {
+    display: none;
+  }
+
+  .band-story {
+    background-color: purple;
+    background-image: url(images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .banner {
+    font-size: 3rem;
+  }
+
+  #disappear {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .bio-box {
+    display: flex;
+    flex-direction: column;
+  }
+}
+main::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background-image: url("/images/145559.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  z-index: -1;
+}
+
+.table_container {
+  padding: 0 10%;
+  margin: 3.25rem auto 0;
+}
+
+.tour_title {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead {
+  background-color: #7E1A36;
+}
+.table thead tr th {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  padding: 1rem;
+  vertical-align: top;
+  border: 1px solid #fff;
+  color: #000;
+}
+.table tbody tr td {
+  font-size: 2rem;
+  letter-spacing: 0.35px;
+  font-weight: normal;
+  color: white;
+  background-color: #2B2B2B;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+#book_now {
+  width: 500px;
+  max-width: 100%;
+  height: 233px;
+  margin: 3rem auto;
+  background-image: url("/images/tickets.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: block;
+}
+
+@media only screen and (max-width: 786px) {
+  .table {
+    display: block;
+    width: 100%;
+  }
+  .table thead {
+    display: none;
+  }
+  .table tbody {
+    display: block;
+    width: 100%;
+  }
+  .table tbody tr td {
+    text-align: right;
+    padding-right: 1rem 2rem 1rem 0;
+    padding-left: 50%;
+    position: relative;
+  }
+  .table tr {
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+    border: 1px solid #fff;
+  }
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    width: 30%;
+    padding-left: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: left;
+    color: #000;
+    background-color: #7E1A36;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
